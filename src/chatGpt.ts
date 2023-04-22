@@ -11,7 +11,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration)
 
 const generatePromp = (text: string) => {
-  return `Regresame un objeto de javascript valido en una cadena de texto con los siguientes atributos en comillas: feelings, steps donde feelings y steps son arreglos, de la siguiente frase:${text}`
+  return `Return JSON object validate feelings[""], steps[""] from phrase(spanish):${text}`
 }
 
 export const getFeelings = async (req: Request, res: Response) => {
